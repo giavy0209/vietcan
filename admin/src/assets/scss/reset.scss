@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  @include custom-scrollbar;
+}
+
+body {
+  line-height: 1.5;
+  color: $text-color-normal;
+  font-size: $text-size-normal;
+  font-family: 'Work Sans', sans-serif;
+
+  background-color: $background-color-container;
+}
