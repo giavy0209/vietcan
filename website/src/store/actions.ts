@@ -1,8 +1,8 @@
-export const ACTION = 'ACTION'
+export const LANGUAGE = 'LANGUAGE'
 
-export const actionChangeAction = function (action : any) {
+export const actionChangeLanguage = function (language : any) {
     return {
-        type : ACTION,
-        payload : action
+        type : LANGUAGE,
+        payload : {language}
     }
 }

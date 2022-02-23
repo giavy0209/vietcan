@@ -18,7 +18,6 @@ button {
 
 html {
   scroll-behavior: smooth;
-  @include custom-scrollbar;
 }
 
 body {
@@ -27,5 +26,10 @@ body {
   font-size: $text-size-normal;
   font-family: 'Work Sans', sans-serif;
 
-  background-color: $background-color-container;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+
 }

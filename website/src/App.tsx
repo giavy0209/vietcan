@@ -1,6 +1,6 @@
 import callAPI from "callAPI";
 import { useEffect } from "react";
-
+import {Header} from './components'
 function App() {
   useEffect(() => {
     callAPI.get('/')
@@ -10,6 +10,8 @@ function App() {
   },[])
   return (
     <div className="App">
+      <Header/>
+
     </div>
   );
 }

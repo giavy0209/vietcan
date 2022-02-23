@@ -25,13 +25,15 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "typeRoots" : ["node_modules/@types", "src/types"]
   },
   "exclude": [
     "node_modules",
     "cypress"
   ],
   "include": [
-    "src"
+    "src",
+    "./src/index.d.ts"
   ]
 }

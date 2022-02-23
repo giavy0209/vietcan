@@ -14,30 +14,9 @@ $background-color-container: #16171b;
 $background-color-header: #1e1f24;
 $background-color-marketcap: #171a2b;
 
-$background-hover-sidebar: linear-gradient(
-  274.68deg,
-  rgba(1, 197, 255, 0) 3.94%,
-  rgba(254, 2, 247, 0.55) 96.54%
-);
-
-$background-gradient-1: linear-gradient(312.24deg, #01c5ff 4.38%, #fe02f7 100%);
-$background-gradient-2: linear-gradient(92.61deg, #fa528d -2.68%, #c954f0 98.14%);
-
-$primary-color: #f52871;
-$secondary-color: #353849;
-$accent-color: #24b7e8;
-$pink-color: #ff6a97;
-$fail-color: #ff0000;
-$success-color: #2ce999;
-$border-color: #2e3145;
-
-// Z Index
-$z-index-toast: 99999;
-$z-index-popup: 9999;
-$z-index-header: 999;
-$z-index-bottom: 998;
-$z-index-crop-container: 997;
-$z-index-dropdown: 99;
+$primary-color: #005fa1;
+$secondary-color: #4c4c4c;
+$bold-text : #333333;
 
 // Box Shadow
 $box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
@@ -45,3 +24,5 @@ $box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
 // Max Width
 $max-width-tablet: 768px;
 $max-width-mobile: 576px;
+
+$header-height : 112.58px;

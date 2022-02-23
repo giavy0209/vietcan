@@ -1,4 +1,3 @@
-import fs from 'fs'
 import http from 'http'
 import express from 'express'
 import { Server } from "socket.io";
@@ -6,22 +5,29 @@ import { Server } from "socket.io";
 import cors from 'cors'
 import './config'
 import './helpers/connectDB'
-
-declare function require(name: string): any;
+import {API as APIRoutes} from './routers'
+import {SSR as SSRRoutes} from './routers'
 
 const app = express()
 const server = http.createServer(app)
 
 app.use(cors())
+app.use(express.json())
 
-fs.readdirSync('./models').forEach(model => {
-    require(`./models/${model}`)
+const API = express.Router()
+app.use('/api', API)
+
+const SSR = express.Router()
+app.use('/', SSR)
+
+APIRoutes.forEach(_apiRoutes => {
+    _apiRoutes(API)
 })
 
-fs.readdirSync('./routers').forEach(router => {
-    const route = require(`./routers/${router}`)
-    route(app)
+SSRRoutes.forEach(_ssrRoutes => {
+    _ssrRoutes(SSR)
 })
+
 
 const io = new Server(server, {
     cors: {
